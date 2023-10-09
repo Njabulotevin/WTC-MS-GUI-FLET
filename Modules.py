@@ -1,5 +1,6 @@
 from flet import *
-from utils.format_data import Data 
+from utils.format_data import Data
+import subprocess
 
 
 class Modules:
@@ -66,3 +67,13 @@ class Module():
         self.status = status
         self.command = command
         self.uuid = uuid
+
+    def get_topics(self):
+        result = subprocess.run(["wtc-lms" ,"topics", self.uuid], capture_output=True, text=True)
+        with open("./data/new_data.txt", "w") as my_file:
+            my_file.write(result.stdout)
+            print("File created!")     
+
+
+module = Module("Fundamentals", "[Not Started]", "wtc-lms topics giant-green-cycle", "giant-green-cycle")
+module.get_topics()
