@@ -17,9 +17,17 @@ def get_formated_data(data : list[str], target : str):
     
     r = remove_instruction
     for i in range(0, len(r) - 1, 2 ):
-        formated_data.append((r[i], r[i + 1]))
-
+        status = extract_string(r[i],'[', ']')
+        uuid = extract_string(r[i], "(" , ")")
+        formated_data.append((r[i].replace(status, "").replace(uuid, "").strip(), status ,r[i + 1], uuid))
     return formated_data
+
+
+
+def extract_string(target, start : str, end : str):
+    start, end = target.index(start), target.find(end) + 1
+    return target[start:end]
+
 
 # Modules enum
 class TopicFiles():

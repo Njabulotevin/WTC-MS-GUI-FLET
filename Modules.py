@@ -1,13 +1,9 @@
 from flet import *
+from utils.format_data import Data 
 
 
 class Modules:
-    modules = [
-        ("Fundamentals", "completed"),
-        ("Object Orientation", "in_progress"),
-        ("Web Development", "not_started"),
-    ]
-
+    modules = Data.get_modules()
     def __init__(
         self,
         page: Page,
@@ -62,3 +58,11 @@ class Modules:
                 target.content.controls[1].spans[0].style = TextStyle(
                     decoration=TextDecoration.NONE)
         self.page.update()
+
+
+class Module():
+    def __init__(self, name, status, command, uuid) -> None:
+        self.name = name
+        self.status = status
+        self.command = command
+        self.uuid = uuid
