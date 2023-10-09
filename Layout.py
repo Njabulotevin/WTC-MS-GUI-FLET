@@ -20,7 +20,7 @@ class Layout():
             if target.key == str(key):
                 targeted[0].color = ThemeColors.blue
                 targeted[1].color = ThemeColors.blue
-                target.border = self.page.active_border
+                target.border = self.active_border
                 self.page.active = str(key)
             else:
                 targeted[0].color = ThemeColors.secondary_color

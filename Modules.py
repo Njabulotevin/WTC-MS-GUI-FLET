@@ -24,7 +24,7 @@ class Modules:
         self.content = content
         self.show_topics = show_topics
 
-        self.render_modules = render_modules = [
+        self.render_modules = [
             Container(
                 Row(
                     [

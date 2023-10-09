@@ -1,0 +1,17 @@
+--------------------------------------------------------------------------------------------------------------------------------
+Available modules:
+--------------------------------------------------------------------------------------------------------------------------------
+
+Fundamentals [In Progress] (giant-green-cycle)
+•You can do the following to view topics:
+wtc-lms topics giant-green-cycle
+
+Object Orientation [Not Started] (black-like-funny)
+•You can do the following to view topics:
+wtc-lms topics black-like-funny
+
+Web Development [Not Started] (oval-angry-white)
+•You can do the following to view topics:
+wtc-lms topics oval-angry-white
+
+--------------------------------------------------------------------------------------------------------------------------------
